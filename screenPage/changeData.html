@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../libs/mui/css/mui.picker.min.css" rel="stylesheet" />		
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/changeData.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="hasHeader" style="height: 100%;">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">修改资料</h1>
+			</header>
+			<div class="mui-content">
+				<div class="data-list" id="carVehicleNum">
+					<span class="data-list-left"><span style="color: red; position: relative;top: 3px;">*</span>车牌号</span>
+					<span class="data-list-right">
+						<input id="vehicleNum" type="text" placeholder="必填">
+						<img id="licenceImg" alt="0" src="../img/images/camera.png" style="height:20px;position: absolute;right: 2px;top: 3px;"/>
+					</span>
+				</div>
+				<div class="data-list" id="carInternalNum" style="display: none;">
+					<span class="data-list-left"><span style="color: red; position: relative;top: 3px;">*</span>内部编号</span>
+					<span class="data-list-right">
+						<input id="internalNum" type="text" placeholder="必填">
+					</span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left"><span style="color: red; position: relative;top: 3px;">*</span>SIM卡号</span>
+					<span class="data-list-right"><input id="simNum" type="text" placeholder="必填" style="color: #aaa;" disabled="disabled"></span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left"><span style="color: red; position: relative;top: 3px;">*</span>终端ID号</span>
+					<span class="data-list-right"><input id="sim2Num" type="text" placeholder="必填" style="color: #aaa;" disabled="disabled"></span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left"><span style="color: red; position: relative;top: 3px;">*</span>安装时间</span>
+					<span class="data-list-right"><input id="installTime" type="text" placeholder="必填"></span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left">发动机号</span>
+					<span class="data-list-right">
+						<input id="engineCode" type="text" placeholder="选填">
+						<img id="dynamoImg" alt="1" src="../img/images/camera.png" style="height:20px;position: absolute;right: 2px;top: 3px;"/>
+					</span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left">车架号</span>
+					<span class="data-list-right"><input id="shelfCode" type="text" placeholder="选填"></span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left">安装人</span>
+					<span class="data-list-right" style="padding-bottom: 2px;"><select id="InstallerID"></select></span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left">24h电话</span>
+					<span class="data-list-right"><input id="AlldayTel" type="text" placeholder="选填"></span>
+				</div>
+				<div class="data-list">
+					<span class="data-list-left">24h联系人</span>
+					<span class="data-list-right"><input id="AlldayContacter" type="text" placeholder="选填"></span>
+				</div>	
+				<div class="title-uploadImg">上传证件和设备图片</div>
+				<div id='image-list' class="row image-list"></div>
+				<div class="img-content">
+					<div class="img-box">
+						<img src="../img/images/photos_03.png" alt="1" data-src="../img/images/photos_03.png"/>
+						<span class="clearImg">X</span>
+					</div>
+					<div class="img-box">
+						<img src="../img/images/photos_05.png" alt="1" data-src="../img/images/photos_05.png"/>
+						<span class="clearImg">X</span>
+					</div>
+					<div class="img-box">
+						<img src="../img/images/photos_07.png" alt="1" data-src="../img/images/photos_07.png"/>
+						<span class="clearImg">X</span>
+					</div>
+				</div>
+				<div class="btn-content">
+					<button id="saveBtn" class="saveBtn">保存</button>
+				</div>
+			</div>
+		</div>
+		<script src="../js/Config.js"></script>
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../libs/mui/js/mui.picker.min.js"></script>
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script src="../js/page/changeData.js"></script>
+	</body>
+</html>

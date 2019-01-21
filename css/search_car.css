@@ -1,0 +1,70 @@
+.cars_search_latest{
+	height: 40px;
+	text-align: center;
+}
+.cars_search_latest li{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	line-height: 40px;
+}
+.cars_search_latest li > a{
+	color: #077acb;
+}
+.cars_speed {
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	font-weight: normal;
+}
+.mui-slider .mui-slider-group .mui-control-content .cars_img{
+	width: 10px;
+	height: 15px;
+	float: left;
+	margin: 30px 10px 25px 0;
+}
+.cars_detail_all{
+	position: fixed;
+	opacity: 0.8;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 10;
+	padding: 0 10px;
+}
+.cars_online{
+	color: green;
+	display: inline-block;
+	float: right;
+}
+.cars_status_img{
+	text-align: center;
+}
+.cars_status_img span{
+	display: block;
+}
+.mui-slider .mui-slider-group .mui-slider-item img{
+	width: 30px;
+	margin-right: 12px;
+}
+
+.head_input_ss{
+	background-color: white;
+	margin-left: 30px;
+	height: 36px;
+	line-height: 36px;
+	text-align: left;
+	margin-top: 4px;
+	border-radius: 2px;
+}
+.head_input_ss > span{
+	color: #077acb;
+	top: -4px;
+	left: 2px;
+}
+.head_input_ss > input{
+	height: 30px;
+	vertical-align: 5px;
+	width: calc(100% - 35px);
+	border: none;
+}

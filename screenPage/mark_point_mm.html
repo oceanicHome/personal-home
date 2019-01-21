@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>佳裕车联</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/mark_point_mm.css" rel="stylesheet"/>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=9h2aT0iKkm0kydDpTtQo897dDzRewfIL"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/InfoBox/1.2/src/InfoBox_min.js"></script>
+		<script src="../js/Config.js"></script>	
+		<style>
+			#pointName{
+				width: 50px;
+				height: 25px;
+			}
+			#pointImg{
+				width: 20px;
+				height: 20px;
+				vertical-align: middle;
+				margin-left: 10px;
+				display: none;
+			}
+		</style>>
+	</head>
+	<body style="background-color: #f2f2f2;">
+		<div class="hasHeader">
+			<header class="mui-bar mui-bar-nav" style="box-shadow: none;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">标注点审核</h1>
+			</header>
+			
+			<div class="mui-content" style="background-color: transparent;">				
+				<div id="map">地图加载中...</div>
+				<div id="hiddenMap" style="display: none;"></div>	
+			</div>
+		</div>
+		
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/common.js"></script>	
+		<script src="../js/page/mark_point_mm.js"></script>
+	</body>
+</html>

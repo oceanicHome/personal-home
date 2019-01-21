@@ -1,0 +1,99 @@
+.list_content{
+	margin-left: 13px;
+	display: none;
+}
+.list_title{
+	height: 24px;
+}
+.list_title_select{
+	color: white;
+	background-color: #077acb;
+	border-radius: 2px;
+}
+.list_title > .uuu_img{
+	display: inline-block;
+	vertical-align: middle;	
+	width: 24px;
+	height: 24px;
+	text-align: center;
+}
+.list_title > .uuu_img img{
+	width: 16px;	
+	margin-top: 4px;
+}
+.list_title > .uuu_t{
+	display: inline-block;
+	max-width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+	height: 24px;
+	line-height: 24px;
+}
+#car_list_messsage{
+	padding: 9px;
+}
+
+#car_list_sort{
+	padding: 3px;
+	position: fixed;
+	width: 100%;
+	top: calc(100% - 40px);
+	opacity: 0.5;
+}
+#car_list_sort #arrows_d{
+	background-color: #208fde;
+	text-align: center;
+	border-radius: 2px 2px 0 0;
+}
+#car_list_sort #arrows_d > span{
+	color: white;
+	font-size: 20px;
+}
+.control_p > p{
+	display: none;
+}
+#car_list_sort .bottom_c_s_t{
+	display: flex;
+	justify-content: space-around;
+	background-color: #077acb;
+}
+#car_list_sort .bottom_c_s_t .three_c_s_div{
+	width: 33%;
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	padding: 6px 0;
+	position: relative;
+}
+#car_list_sort .bottom_c_s_t .three_c_s_div > p{
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 3px;
+	background-color: #55d7f1;
+}
+#car_list_sort #sort_content{
+	
+}
+#car_list_sort #sort_content .list_d{
+	position: relative;
+	padding: 6px;
+}
+#car_list_sort #sort_content .list_d .img_d{
+	position: absolute;
+	top: 7px;
+	left: 6px;
+}
+#car_list_sort #sort_content .list_d .span_1{
+	margin-left: 31px;
+	font-size: 14px;
+}
+#car_list_sort #sort_content .list_d .span_2{
+	position: absolute;
+	top: 7px;
+	right: 6px;
+	font-size: 14px;
+}

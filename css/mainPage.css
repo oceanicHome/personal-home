@@ -1,0 +1,201 @@
+#header_main{
+	width: 76%;
+	border-radius: 30px;
+	background: white;
+	height: 30px;
+	margin-top: 7px;
+	line-height: 30px;
+	position: relative;
+}
+#header_main .img_title{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 12px;
+	top: 5px;
+}
+#header_main .img_title.right_i{
+	right: 12px;
+	left: inherit;
+}
+#header_main .input_header{
+	height: 30px;
+	width: calc(100% - 80px);
+	border: none;
+	font-size: 15px;
+	color: #444;
+	text-align: left;
+	padding-left: 38px;
+}
+#red_caution{
+	background: #ff292b;
+	width: 8px;
+	height: 8px;
+	display: inherit;
+	border-radius: 8px;
+	position: absolute;
+	left: calc(25% + 8px);
+	top: 1px;
+	display: none;
+}
+.mui-table-view-cell::after{
+	height: 0;
+}
+#Popover_1{
+	width: inherit;
+	min-width: 140px;
+}
+
+#header_icons{
+	width: 24%;
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	height: 44px;
+	line-height: 44px;
+	padding-top: 5px;
+	overflow: hidden;
+}
+#header_icons .icon-1v{
+	float: left;
+	width: 49%;
+}
+#header_icons .icon-2v{
+	float: right;
+	width: 49%;
+}
+#header_icons img{
+	width: 25px;
+}
+
+#map {
+	width: 100%;
+	position: fixed;
+	top: 45px;
+	left: 0;
+	bottom: 50px;
+	line-height: 200px;
+	text-align: center;
+	background: #FFFFFF;
+}
+.main_tabbar .tab_c_a{
+	font-size: 12px;
+}
+.main_tabbar .tab_c_a > img{
+	width: 28px;
+	display: block;
+	margin: 0 auto;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color: #5ed8e9;
+}
+.check_point{
+	text-align: center;
+}
+.check_point > img{
+	vertical-align: -3px;
+}
+
+
+/*去掉三维*/
+.BMap_noprint.anchorTL > div:last-child{
+	display: none !important;
+}
+.BMap_noprint.anchorTL > div:nth-child(2) > div:first-child{
+	border-radius: 0px 3px 3px 0px;
+	border-right: 1px solid rgb(139, 164, 220);
+}
+/*去掉百度地图logo*/
+.anchorBL{
+	display: none;
+}
+
+/*right-left-btn*/
+.rl_img_div{display: flex;justify-content: space-around;width: 100%;background-color: transparent;position: fixed;bottom: 90px;left: 0;}
+.rl_img_div > img.img_rl{height: 35px;border: 1px solid #90a4bf;border-radius: 20px;box-shadow: -1px 2px 2px #90a4bf;}
+
+/*切换的两个按钮*/
+.car_two_btn{width: 35px;text-align: center;padding: 3px;border-radius: 3px;margin-left: 2px;background-color: white;box-shadow: -1px 2px 2px #90a4bf;position: fixed;right: 5px;bottom: 20%;}
+.car_two_btn > img{width: 20px;}
+.car_two_btn > p{margin: 5px 2px;padding: 0;height: 1px;background-color: #cccccc;}
+
+/*infoBox*/
+.infoBox > img:first-child{
+	width: 23px;
+}
+.infoBoxContent{
+	padding: 10px;
+	padding-bottom: 5px;				
+	font-size: 14px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 0 4px 0.3px #888;
+}
+.infoBoxContent ul{
+	margin: 0px;
+	padding: 0px;				
+}
+.infoBoxContent ul li{
+	list-style: none;			
+	line-height: 18px;
+}
+.infoBoxContent>p{
+	margin: 5px 0px 1px 0px;
+	padding-top: 0px;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	z-index: 10;
+}
+.infoBoxContent>p>img{
+	margin: 0px 40px;
+}
+.mapBtn{
+	width: 33.33%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding-right: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #077ACB;
+}
+.mapBtn:last-child{
+	padding-right: 0px;
+}
+.rightLine{
+	width: 3px;
+	height: 90%;
+	position: absolute;
+	right: 0;
+	top: 5%;
+	border-radius: 4px;
+	background: linear-gradient(to top,#45d2ff, #79ded1);
+}
+#whiteAngle{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	bottom: 12px;
+	left: 140px;				
+	transform: rotate(29deg) skew(0deg,30deg);
+	box-shadow: 2px 2px 6px -3px #888;
+}
+.check_point{
+	margin-top: 8px;
+	font-size: 16px;
+	margin-right: 5px;
+}
+.check_point img{
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.my_popup_content .check_point:first-child{
+	margin-top: 0px;
+}
+.hideList{
+	display: none;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet"/>
+		<link href="../css/track_play.css" rel="stylesheet"/>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=YpPYDb9u47Zvs6AElUqiTKtyZkpeEw20"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.2/src/TrafficControl_min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/InfoBox/1.2/src/InfoBox_min.js"></script>	
+	</head>
+	<body>
+		<div class="hasHeader">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title" id="carNoVal">轨迹回放</h1>
+			</header>
+			<div class="mui-content" id="carDetail">
+				<div id="trackMap"></div>
+				<div id="trackBox">
+					<p class="trackBoxP">
+						<img src="../img/images/play_03.png" alt="" />
+						<span id="topTime">2018-10-11 11:20</span>
+						<span style="float: right;display: inline-block;">					
+							<span class="mui-switch mui-switch-mini mui-active ">
+								<span class="mui-switch-handle"></span>
+							</span>
+						</span>
+						<span style="float: right;display: inline-block;font-size: 12px;">过滤0速度值</span>
+					</p>
+					<div class="trackBoxDiv" style="margin: 0px;">
+						<p class="divP">
+							<span class="divPSpan spanLeft">
+								<span class="spanChild">速度</span>
+								<span id="trackSpeed" class="spanChild">100km/h</span>
+							</span>
+							<span class="divPSpan spanRight"></span>
+						</p>
+						<p class="divP">
+							<span class="divPSpan spanLeft">
+								<span class="spanChild">回放里程</span>
+								<span id="trackMile" class="spanChild">0km</span>
+							</span>
+							<span class="divPSpan spanRight"></span>
+						</p>
+						<p class="divP">
+							<span class="divPSpan spanLeft">
+								<span class="spanChild">方向</span>
+								<span id="trackDirection" class="spanChild">东北</span>
+							</span>
+							<span class="divPSpan spanRight"></span>
+						</p>
+						<p class="divP">
+							<span class="divPSpan spanLeft">
+								<span class="spanChild">油量</span>
+								<span id="trackOil" class="spanChild">0L</span>
+							</span>							
+						</p>
+					</div>
+					<p class="trackBoxP" id="statusDescribe">ACC关,定位</p>
+					<p class="trackBoxP" id="trackAdress">武汉市汉阳区龙阳大道</p>
+					<div class="trackBoxDiv">
+						<div class="mui-input-row mui-input-range">
+				            <input type="range" id='block-range' value="0" min="0" max="100" >
+				        </div>
+				        <div class="controlImg">
+				        	<img id="leftControl" src="../img/images/play_15.png" alt="" />
+				        	<img id="centerControl" src="../img/images/play_18.png" alt="" />
+				        	<img id="rightControl" src="../img/images/play_21.png" alt="" />
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/page/track_play.js"></script>		
+	</body>
+
+</html>

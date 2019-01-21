@@ -1,0 +1,37 @@
+	
+{	
+	"湖北": {
+		"city":"hubei",
+		"toCity":"#hubei",
+		"area":[
+			{
+				"title": "湖北一区",
+				"multi": true,
+				"api": "http://139.224.66.204:9090"				
+			},
+			{
+				"title": "湖北二区",
+				"multi": true,
+				"api": "http://139.224.66.204:9090"			
+			}
+		]
+	},
+	"湖南": {
+		"city":"hunan",
+		"toCity":"#hunan",
+		"area":[
+			{
+				"title": "湖南一区",
+				"multi": false,
+				"api": "http://139.224.66.204:9099"
+			},
+			{
+				"title": "湖南二区",
+				"multi": false,
+				"api": "http://139.224.66.204:9099"
+			}
+		]
+	}
+	
+}	
+

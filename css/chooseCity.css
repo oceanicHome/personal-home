@@ -1,0 +1,44 @@
+.mui-segmented-control .mui-control-item.mui-active{
+	background-color: #45D2FF;
+	color: #000;
+}
+#leftControls,#rightContents{
+	background-color: #fff;
+}
+.mui-row.mui-fullscreen>[class*="mui-col-"] {
+	height: 100%;
+}
+.mui-col-xs-3,
+.mui-control-content {
+	overflow-y: auto;
+	height: 100%;
+	z-index: 1;
+	text-align: center;
+}
+.mui-segmented-control .mui-control-item {
+	line-height: 50px;
+	width: 100%;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	background-color: #45D2FF;
+	color:#000;
+}
+.btnA{
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 5px;		   
+    background-clip: padding-box;
+    padding: 10px 25px;
+    background-color: #fff;
+    margin: 10px 5px 0px 5px;
+   
+}
+.btnA::before{
+    position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background: linear-gradient(to right,#45d2ff, #79ded1);
+    content: '';
+  	z-index: -1;
+    border-radius: 5px;
+}

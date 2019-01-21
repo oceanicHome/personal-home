@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<style type="text/css">html,body{background-color: transparent;}</style>
+	</head>
+	<body>
+		<div class="my_popup_detail">
+			<div class="my_p_d_content">
+				<ul class="my_d_ul">
+					<li id="tit_car_num" class="my_li_title">
+						鄂A123Q5
+					</li>
+					<li class="my_li_content">
+						<span id="time_num">2018/3/5 11:12</span>
+					</li>
+					<li class="my_li_content">
+						<span>速度：</span>
+						<span id="speed_num">0.00km/h</span>
+					</li>
+					<li class="my_li_content">
+						<span>方向：</span>
+						<span id="direction_num">正北</span>
+					</li>
+					<li class="my_li_content">
+						<span>油量：</span>
+						<span id="oil_num">0L</span>
+					</li>
+					<li class="my_li_content">
+						<span>状态：</span>
+						<span id="state_num">ACC关，定位</span>
+					</li>
+					<li class="my_li_content">
+						<span>位置：</span>
+						<span id="position_num">武汉市青山区</span>
+					</li>
+				</ul>
+				<div class="button_bb">
+					<img class="enter_c_track_detail" alt="1" src="../img/images/center_21.png"/>
+					<img class="enter_c_track_detail" alt="2" src="../img/images/center_23.png"/>
+				</div>
+			</div>
+			<div class="my_triangle shadow" style="margin: 0;bottom: -12px;z-index: -1;"></div>
+			<div class="my_triangle" style="margin: 0;bottom: -12px;"></div>
+			<img class="cancel" id="cancel" alt="3" src="../img/images/center_17.png"/>
+		</div>
+		
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+//				var pop_car_detail = localStorage.getItem("pop_car_detail");
+//				pop_car_detail = JSON.parse(pop_car_detail);
+				
+				$('#tit_car_num').text('鄂A123Q5');
+				$('#time_num').text('2018/3/5 11:12');
+				$('#speed_num').text('0.00km/h');
+				$('#direction_num').text('正北');
+				$('#oil_num').text('0L');
+				$('#state_num').text('ACC关，定位');
+				$('#position_num').text('武汉市青山区');
+				
+				$('.button_bb .enter_c_track_detail').click(function(){var self = $(this);plus.webview.currentWebview().opener().evalJS('sub_pop_detail('+self.attr("alt")+')')});
+				$('#cancel').click(function(){var self = $(this);plus.webview.currentWebview().opener().evalJS('sub_pop_detail('+self.attr("alt")+')')});})
+		</script>
+	</body>
+</html>
+

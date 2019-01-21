@@ -1,0 +1,152 @@
+{
+  "index.html": {
+    "refer": [
+      "plus/maps.html",
+      "about.html",
+      "screenPage/maps.html",
+      "screenPage/chooseCity.html",
+      "screenPage/mainPage.html"
+    ],
+    "resources": []
+  },
+  "plus/maps.html": {
+    "refer": [
+      "plus/maps_map.html",
+      "plus/doc.html"
+    ],
+    "resources": []
+  },
+  "plus/maps_map.html": {
+    "resources": [
+      "plus/maps_map_sub.html"
+    ],
+    "refer": [
+      "plus/maps_map_sub.html"
+    ]
+  },
+  "plus/doc.html": {
+    "refer": [
+      "doc/maps.html"
+    ],
+    "resources": []
+  },
+  "screenPage/maps.html": {
+    "refer": [
+      "screenPage/maps_map.html"
+    ],
+    "resources": []
+  },
+  "screenPage/maps_map.html": {
+    "resources": [
+      "screenPage/maps_map_sub.html"
+    ],
+    "refer": [
+      "screenPage/maps_map_sub.html"
+    ]
+  },
+  "screenPage/mainPage.html": {
+    "refer": [
+      "screenPage/search_car.html",
+      "screenPage/settings.html",
+      "screenPage/maps_map_sub.html",
+      "screenPage/pop_one.html",
+      "screenPage/pop_two.html",
+      "screenPage/car_group_list.html",
+      "screenPage/hhhhh.html",
+      "screenPage/bg_view.html",
+      "screenPage/car_status_list.html",
+      "screenPage/rl_space.html",
+      "screenPage/car_pos.html",
+      "screenPage/car_play_bottom.html",
+      "screenPage/pop_detail.html",
+      "screenPage/track_list.html",
+      "screenPage/car_detail.html",
+      "screenPage/panoraPage.html",
+      "screenPage/check_mark_points.html",
+      "screenPage/changeData.html"
+    ],
+    "resources": [
+      "screenPage/maps_map_sub.html",
+      "screenPage/pop_two.html",
+      "screenPage/pop_one.html",
+      "screenPage/hhhhh.html",
+      "screenPage/bg_view.html",
+      "screenPage/rl_space.html",
+      "screenPage/car_play_bottom.html",
+      "img/direction/online_00.png",
+      "img/images/center_21.png",
+      "img/images/center_23.png",
+      "img/images/center_17.png",
+      "img/direction/offline_00.png"
+    ]
+  },
+  "screenPage/pop_two.html": {
+    "refer": [
+      "screenPage/check_mark_points.html"
+    ],
+    "resources": []
+  },
+  "screenPage/pop_detail.html": {
+    "refer": [
+      "screenPage/track_list.html",
+      "screenPage/car_detail.html"
+    ],
+    "resources": []
+  },
+  "screenPage/car_detail.html": {
+    "resources": [
+      "screenPage/car_detail_pop.html",
+      "css/car_detail.css",
+      "js/page/car_detail.js"
+    ],
+    "refer": [
+      "screenPage/car_detail_pop.html"
+    ]
+  },
+  "screenPage/mark_point_mm.html": {
+    "resources": [
+      "screenPage/pop_info.html",
+      "screenPage/pop_mark_check.html"
+    ],
+    "refer": [
+      "screenPage/pop_info.html",
+      "screenPage/pop_mark_check.html"
+    ]
+  },
+  "screenPage/check_mark_points.html": {
+    "refer": [
+      "screenPage/mark_point_mm.html"
+    ],
+    "resources": []
+  },
+  "screenPage/track_list.html": {
+    "refer": [
+      "screenPage/track_play.html"
+    ],
+    "resources": [
+      "img/u659.png",
+      "img/u655.png",
+      "img/u653.png"
+    ]
+  },
+  "screenPage/settings.html": {
+    "resources": [
+      "screenPage/pop_cfir_bone.html"
+    ],
+    "refer": [
+      "screenPage/pop_cfir_bone.html",
+      "screenPage/monitorSetting.html"
+    ]
+  },
+  "screenPage/pop_one.html": {
+    "resources": [
+      "img/images/center_02_03.png"
+    ]
+  },
+  "screenPage/changeData.html": {
+    "refer": [
+      "screenPage/mainPage.html",
+      "screenPage/showImg.html"
+    ]
+  }
+}

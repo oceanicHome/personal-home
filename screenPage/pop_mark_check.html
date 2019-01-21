@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/pop_mark_check.css"/>
+		<style type="text/css">html,body{background-color: transparent;}</style>
+	</head>
+	<body class="mark_c_body">
+		<div class="bg_mark"></div>
+		<div class="mark_c_content">
+			<div class="mark_check_ccf">
+				<div class="mark_img">
+					<img src="../img/images/audit_03.png"/>
+				</div>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您不在目标点附近，无法进行该操作。</p>
+				<div id="btn_ok">确定</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var btn_ok = document.getElementById("btn_ok");
+			btn_ok.addEventListener("click",function(){plus.webview.currentWebview().opener().evalJS('hide_pop_view()')});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<style type="text/css">html,body{background-color: transparent;}</style>
+	</head>
+	<body>
+		<div class="my_popup_div add_dote">
+			<div class="my_popup_content" style="width: 100%;min-width: inherit;">
+				<ul class="my_ul">
+					<li class="my_li_title">
+						标点信息
+					</li>
+					<li class="my_li_content">
+						<span>编号：</span>
+						<span id="mark_number">899</span>
+					</li>
+					<li class="my_li_content">
+						<span>名称：</span>
+						<span id="mark_name">中铁电气化局青山站工地</span>
+					</li>
+					<li class="my_li_content">
+						<span>地址：</span>
+						<span id="mark_address">武汉市青山区</span>
+					</li>
+				</ul>
+				<div class="my_parting_line">
+					确认标注点状态
+				</div>
+				<div class="my_two_btn">
+					<span class="btn_1" alt="1">待确认点</span>
+					<span class="btn_2" alt="2">关注点</span>
+					<span class="btn_3" alt="3">正常点</span>
+				</div>
+				<div class="my_right_top_btn">
+					<img src="../img/images/audit_06.png"/>
+					<span>导航</span>
+				</div>
+				<div class="my_triangle"></div>
+				<div class="my_triangle shadow"></div>
+			</div>
+		</div>
+		
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			var macth_mark_point = JSON.parse(localStorage.getItem("macth_mark_point"));
+			$('#mark_number').html(macth_mark_point.PointID);
+			$('#mark_name').html(macth_mark_point.PointName);
+			$('#mark_address').html(macth_mark_point.Address);
+			$('.my_popup_div.add_dote .my_two_btn span').click(function(){var alt = $(this).attr("alt");plus.webview.currentWebview().opener().evalJS('markSubmit('+alt+')')});
+		</script>
+		
+	</body>
+</html>

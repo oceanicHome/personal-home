@@ -1,0 +1,52 @@
+html,body{
+	height: 100%;
+}
+.mui-bar{
+	background-color: #077ACB;
+	height: 64px !important;
+    line-height: 64px !important;
+    padding-top: 20px !important;
+}
+.mui-bar .mui-title,.mui-bar .mui-icon{
+	color: #fff;
+}
+.mui-content{
+	height: 100%;
+	padding-top: 44px;
+}
+#carDetailMap{
+	height: 100%;
+	/*background-color: #00aa00;*/
+}
+#carDetailBox{
+	position: fixed;
+	bottom: 0;
+	padding: 5px 10px;
+	margin: 5px;
+	border-radius: 3px;
+	background-color: #fff;
+}
+#carDetailBox>ul{
+	margin: 0;
+	padding: 0;
+}
+#carDetailBox>ul li{
+	list-style: none;			
+	line-height: 20px;
+}
+#carDetailBox>ul li:first-child .leftSpan{
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #000;
+	width: 100%;
+}
+.leftSpan,.rightSpan{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+}
+.leftSpan{
+	width: 45px;
+	color: #a6a6a6;
+}

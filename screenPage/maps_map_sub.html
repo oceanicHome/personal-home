@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title></title>
+		
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/mainPage.css" rel="stylesheet" />
+		
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			function resetMap(i,obj){
+				switch (i){
+					case 1:plus.webview.currentWebview().opener().evalJS('Map_NORMAL()');
+						break;
+						case 2:plus.webview.currentWebview().opener().evalJS('resetMap()');
+						break;
+						case 3:plus.webview.currentWebview().opener().evalJS('Map_SATELLITE()');
+						break;
+					default:
+						break;
+				}
+				
+				$(".btn_ss").removeClass("select_btn");
+				$(obj).addClass("select_btn");
+			}
+			
+			
+		</script>
+		<style type="text/css">
+			html,body{
+				overflow:hidden;
+			}
+			
+			.btn_ss{
+				color: black;
+				font-size: 12px;
+				padding: 4px 10px;
+				float: left;
+				background: white;
+				border: 1px solid rgb(142, 168, 224);
+				border-right: none;
+			}
+			.btn_ss:last-child{
+				border-right: 1px solid rgb(142, 168, 224);
+				border-radius: 0 3px 3px 0;
+			}
+			.btn_ss:first-child{
+				border-radius: 3px 0 0 3px;
+			}
+			.select_btn{
+				color: white;
+				background: rgb(142, 168, 224);
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div style="overflow: hidden;">
+			<div class="btn_ss select_btn" onclick="resetMap(1,this)">NOR</div>
+			<div class="btn_ss" onclick="resetMap(2,this)">重置</div>
+			<div class="btn_ss" onclick="resetMap(3,this)">SATE</div>
+		</div>-->
+		
+		
+		<div class="rl_img_div">
+			<img class="img_rl" alt="0" src="../img/images/center_33.png"/>
+			<img class="img_rl" alt="1" src="../img/images/center_36.png"/>
+		</div>
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){$('.rl_img_div .img_rl').click(function(){var alt=$(this).attr("alt");plus.webview.currentWebview().opener().evalJS('view_rl_tap('+alt+')')})});
+		</script>
+		
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/page/mainPage.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<style type="text/css">html,body{background-color: transparent;}.mui-popup-buttons .mui-popup-button:first-child{font-weight: 600;color: red;}</style>
+	</head>
+	<body>
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script type="text/javascript">
+			var check_msg = localStorage.getItem("check_msg");var check_url = localStorage.getItem("check_url");
+			setTimeout(function(){
+				mui.confirm(check_msg,"新版本信息",["更新","取消"],function(e){
+					if(0 == e.index){
+						plus.runtime.openURL(check_url);
+						var ws=plus.webview.currentWebview();
+						plus.webview.close(ws);
+					}else{
+						mui.alert('如果没有及时更新,可能会影响使用');
+						var ws=plus.webview.currentWebview();
+						plus.webview.close(ws);
+					}
+				},'div');				
+			},200);
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>佳裕车联</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../libs/mui/css/mui.picker.min.css" rel="stylesheet" />		
+		<link href="../css/track_list.css" rel="stylesheet" />		
+	</head>
+	<body style="background-color: #f2f2f2;">
+		
+		<div class="hasHeader">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">鄂A123Q5</h1>
+			</header>
+			
+			<div class="mui-content">
+				<div class="mui-content-padded" style="margin: 6px;">
+					<div class="search_header_div">
+						<span class="mui-icon mui-icon-search"></span>
+						<input class="search_tit" type="text" placeholder="请输入车牌号"/>
+						<div class="searchDiv"><ul></ul></div>
+					</div>
+					
+					<div style="padding-top: 8px;">
+						<div class="head_three">
+							<a class="my-control-item my-active" data-index="0" href="#scroll1">今天</a>
+							<a class="my-control-item" data-index="1" href="#scroll2">昨天</a>
+							<a class="my-control-item" data-index="2" href="#scroll3">自定义</a>
+						</div>
+					</div>
+					
+					<div class="pullRefresh_ss">
+						<div id="scroll1" class="mui-scroll-wrapper my-active" data-index="0">
+							<div class="mui-scroll">
+								<ul class="mui-table-view"></ul>
+							</div>
+						</div><!---->
+						<div id="scroll2" class="mui-scroll-wrapper" data-index="2">
+							<div class="mui-scroll">
+								<ul class="mui-table-view"></ul>
+							</div>
+						</div><!---->
+						<div id="scroll3" class="mui-scroll-wrapper" data-index="3">
+							<div class="mui-scroll">
+								<ul class="mui-table-view"></ul>
+								<div id="dataDiv">
+									<p>查询时间间隔不能超过三天</p>
+									<p><span>开始时间</span><span class="dataSpan" id="beginTime">2018-07-12 12:12</span></p>
+									<p><span>结束时间</span><span class="dataSpan" id="endTime">2018-07-13 12:12</span></p>
+									<p><button id="yesBtn" class="mui-btn mui-btn-primary dataBtn" style="margin-right: 30px;">确定</button>
+									   <button id="noBtn" class="dataBtn">取消</button>
+									</p>
+								</div>
+							</div>
+						</div><!---->
+					</div>					
+				</div>				
+			</div>
+		</div>
+		
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<!--<script src="../libs/mui/js/mui.pullToRefresh.js"></script>-->
+		<!--<script src="../libs/mui/js/mui.pullToRefresh.material.js"></script>-->
+		<script src="../libs/mui/js/mui.picker.min.js"></script>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script  src="../js/Config.js" ></script>
+		<script src="../js/page/track_list.js"></script>
+	</body>
+</html>

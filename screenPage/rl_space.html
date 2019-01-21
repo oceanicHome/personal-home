@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body{margin: 0;}
+			.rl_img_div{display: flex;justify-content: space-around;width: 100%;background-color: transparent;}
+			.rl_img_div > img.img_rl{height: 35px;border: 1px solid #90a4bf;border-radius: 20px;box-shadow: -1px 2px 2px #90a4bf;}
+		</style>
+	</head>
+	<body>
+		<div class="rl_img_div">
+			<img class="img_rl" alt="0" src="../img/images/center_33.png"/>
+			<img class="img_rl" alt="1" src="../img/images/center_36.png"/>
+		</div>
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){$('.rl_img_div .img_rl').click(function(){var alt=$(this).attr("alt");plus.webview.currentWebview().opener().evalJS('view_rl_tap('+alt+')')})});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>佳裕车联</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/chooseCity.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="area" class="hasHeader">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">区域</h1>
+			</header>
+			<div class="mui-content mui-row mui-fullscreen">
+				<div class="mui-col-xs-3">
+					<div id="leftControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+						<a class="mui-control-item" :href="value.toCity" v-for="(value, key) in severObj" v-text="key"></a>
+					</div>
+				</div>
+				<div id="rightContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+					<div :id="value.city" class="mui-control-content" v-for="(value, key) in cityObj">
+						<button @click="back(a)" class="btnA"  v-for="a in value.area" :title="a.api" v-text="a.title"></button>
+					</div>		
+				</div>
+			</div>
+		</div>
+		
+		<script src="../libs/vue/vue.min.js"></script>
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/page/chooseCity.js"></script>
+	</body>
+</html>

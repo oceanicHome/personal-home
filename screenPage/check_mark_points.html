@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>佳裕车联</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/check_mark_points.css" rel="stylesheet" />
+		<script src="../js/Config.js"></script>
+	</head>
+	<body style="background-color: #f2f2f2;">
+		<div class="hasHeader">
+			<header class="mui-bar mui-bar-nav" style="box-shadow: none;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">查看标注点</h1>
+			</header>
+			<div class="mui-content">
+				<div id="slider" style="margin-top: 8px;" class="mui-slider mui-fullscreen">
+					<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">				
+						<div class="mui-scroll mark_points_tab">
+							<a class="mui-control-item mui-active" href="#confirm_point" data-index='3'>                                                                                                                                                                                                                     
+								<span style="color: white;">待确认点</span><span class="mui-badge" style="background-color: #FFD800;">0</span>
+								<span class="underLine"></span>
+						    </a>
+						    <a class="mui-control-item" href="#focus_point" data-index='1'>
+								<span style="color: white;">关注点</span><span class="mui-badge" style="background-color: #F24450;">0</span>
+								<span class="underLine"></span>
+						    </a>
+						    <a class="mui-control-item" href="#nomal_point" data-index='2'>
+								<span style="color: white;">正常点</span><span class="mui-badge" style="background-color: #4FBA6F;">0</span>
+								<span class="underLine"></span>
+							</a>
+						</div>				
+						<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>	
+					</div>
+					
+					<div class="mui-slider-group">
+						<div id="confirm_point" style="border: none;" class="mui-slider-item mui-control-content mui-active">
+							<div id="scroll1" class="mui-scroll-wrapper">
+								<div class="mui-scroll" data-item="3">
+									<div class="mui-control-content mui-active">
+										<div class="mark_point_list_item"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="focus_point" style="border: none;" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll" data-item="1">
+									<div class="mui-control-content mui-active">
+										<div class="mark_point_list_item"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="nomal_point" style="border: none;" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll" data-item="2">
+									<div class="mui-control-content mui-active">
+										<div class="mark_point_list_item"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../libs/mui/js/mui.pullToRefresh.js"></script>
+		<script src="../libs/mui/js/mui.pullToRefresh.material.js"></script>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/page/check_mark_points.js"></script>
+	</body>
+</html>

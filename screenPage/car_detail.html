@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/car_detail.css"/>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=YpPYDb9u47Zvs6AElUqiTKtyZkpeEw20"></script>		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">车辆详情</h1>
+		</header>
+		<div class="mui-content" id="carDetail">
+			<div id="carDetailMap"></div>
+			<div id="carDetailBox">
+				<ul>
+					<li><span class="leftSpan" id="VehicleNum">鄂A123Q5</span></li>
+					<li>
+						<span class="leftSpan">时间</span>
+						<span class="rightSpan" id="GPSTime"></span>
+					</li>					
+					<li>
+						<span class="leftSpan">速度</span>
+						<span class="rightSpan" id="Speed"></span>
+					</li>
+					<li>
+						<span class="leftSpan">里程</span>
+						<span class="rightSpan" id="Mileage"></span>
+					</li>
+					<li>
+						<span class="leftSpan">油量</span>
+						<span class="rightSpan" id="OilNum"></span>
+					</li>
+					<li>
+						<span class="leftSpan">方向</span>
+						<span class="rightSpan" id="DirectStr"></span>
+					</li>
+					<li>
+						<span class="leftSpan">状态</span>
+						<span class="rightSpan" id="carStatus"></span>
+					</li>
+					<li>
+						<span class="leftSpan">报警</span>
+						<span class="rightSpan" id="alarm"></span>
+					</li>
+					<li>
+						<span class="leftSpan">单位</span>
+						<span class="rightSpan" id="carGroup"></span>
+					</li>
+					<li>
+						<span class="leftSpan">电话</span>
+						<a class="rightSpan" id="carTel"></a>
+					</li>
+					<li>
+						<span class="leftSpan">位置</span>
+						<span class="rightSpan" id="Adress"></span>
+					</li>					
+				</ul>
+			</div>
+		</div>
+				
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/page/car_detail.js" type="text/javascript" charset="utf-8"></script>		
+	</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+	"version_android":"2.1.0",
+	"version_ios":"1.1.6",
+	"url_android":"http://139.224.65.72:9910/jycl.apk",
+	"url_ios":"https://itunes.apple.com/cn/app/id1433872738",
+	"msg":"修复监控中心部分车牌号无法显示"
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>佳裕车联</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../libs/mui/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/search_car.css"/>
+		<script src="../js/Config.js"></script>
+	</head>
+	<body style="background-color: #F2F2F2;">
+		<div class="hasHeader">
+			<header class="mui-bar mui-bar-nav">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<div class="head_input_ss">
+					<span class="mui-icon mui-icon-search"></span>
+					<input id="search_car" type="text"/>
+				</div>
+			</header>
+			<div class="mui-content" style="background-color: #fff;">
+				<div>
+					<ul class="cars_search_latest">
+						<li><a href="javascript:void(0);">最近查找</a></li>
+						<li><a href="javascript:void(0);" id="clearHistory">清空记录</a></li>
+					</ul>
+					<!--历史记录-->
+					<ul class="mui-table-view"></ul>
+					<!--模糊搜索-->
+					<ul class="cars_search_rs"></ul>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/page/search_car.js"></script>
+	</body>
+</html>

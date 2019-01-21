@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<script src="../js/Config.js"></script>
+		<style type="text/css">
+			html,body{background-color: transparent;}
+			.my_popup_content.pop_one .mui-table-view-cell::after{height: 0;}
+			.my_popup_content.pop_one .mui-table-view::after{height: 0;}
+			.mui-table-view-cell{padding: 8px 15px;}
+		</style>
+	</head>
+	<body>
+		<div class="my_popup_div" style="height: 200px;padding: 0;margin-left: 0;">
+			<div class="my_popup_content pop_one" style="padding: 0;min-width: 100%;height: 200px;">
+				<div style="background-color: #077acb;color: white;padding: 9px 15px;border-radius: 3px 3px 0 0;">报警消息<span id="pop_one_num">0</span>条</div>
+				<div class="mui-scroll-wrapper" style="top: 40px;border-radius: 0 0 3px 3px;">
+					<div class="mui-scroll">
+						<ul class="mui-table-view" id="pop_one_ul"></ul>
+					</div>
+				</div>
+			
+				<div class="my_triangle tri_one ll_one"></div>
+				<div class="my_triangle tri_two ll_two shadow"></div>
+			</div>
+		</div>
+			
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			mui.init({});			
+			mui('.mui-scroll-wrapper').scroll({deceleration: 0.0005});
+			mui('.my_popup_content.pop_one').on('tap','.mui-table-view-cell',function(){				
+				var currentObjectID = this.getAttribute("allt");
+				var mainpage = plus.webview.getWebviewById('screenPage/mainPage.html');
+				
+				if(mainpage){
+					mui.fire(mainpage,'changeCar',{currentObjectID: currentObjectID});
+				}
+				
+			});
+			var userInfo = localStorage.getItem("userInfo");
+			userInfo = JSON.parse(userInfo);
+			var pop_one_ul = mui('#pop_one_ul')[0];
+			var pop_one_num = mui('#pop_one_num')[0];
+			var pop_one_data = [];											//报警列表数组
+			var alarmData = JSON.parse(localStorage.getItem('alarmData'));  //获取报警列表数据
+			var pageSize = 20;                                              //每页条数
+			var pageIndex = 2;												//页数，从第二页开始，第一页已经在monitor.js里请求了
+			var j = null;													//报警列表数组索引			
+			var endTime = new Date();
+			var startTime = new Date(endTime.getTime() - 2*60*60*1000);
+			endTime = endTime.changeTofilter('-','-');
+			startTime = startTime.changeTofilter('-','-');			
+			var html='';
+			
+			if(alarmData){
+				pop_one_data = alarmData.Data;
+				pop_one_num.innerText = alarmData.DataCount;
+				pop_one_data.forEach(function(item,i){
+					
+					html += '<li class="mui-table-view-cell" allt="'+item.ObjectID+'"><a href="#">'+
+								'<div style="position: relative;">'+
+									'<img src="../img/images/center_02_03.png" width="20" style="position: absolute;top: 0;left: 0;"/>'+
+									'<span style="margin-left: 31px;">'+item.VehicleNum+'</span>'+
+									'<span style="position: absolute;top: 0;right: 0;overflow: hidden;font-size:14px;text-overflow: ellipsis;white-space: nowrap;max-width: 50%;">'+item.AlarmType+'</span>'+
+								'</div>'+
+							'</a>'+
+							'</li>';
+					j = i;
+				});
+			
+				pop_one_ul.innerHTML = html;
+			}					
+			window.addEventListener('changeAlarmList',function(event){
+				var alarmData = event.detail.alarmData;  //console.log(alarmData);
+					alarmData = JSON.parse(alarmData);  //console.log(alarmData);
+				var html='';
+				pop_one_data = alarmData.Data;
+				pop_one_num.innerText = alarmData.DataCount;
+				pop_one_ul.innerHTML = '';
+				
+				pop_one_data.forEach(function(item,i){
+				
+					html += '<li class="mui-table-view-cell" allt="'+item.ObjectID+'"><a href="#">'+
+								'<div style="position: relative;">'+
+									'<img src="../img/images/center_02_03.png" width="20" style="position: absolute;top: 0;left: 0;"/>'+
+									'<span style="margin-left: 31px;">'+item.VehicleNum+'</span>'+
+									'<span style="position: absolute;top: 0;right: 0;overflow: hidden;font-size:12px;text-overflow: ellipsis;white-space: nowrap;max-width: 50%;">'+item.AlarmType+'</span>'+
+								'</div>'+
+							'</a>'+
+							'</li>';
+					j = i;
+				});
+				pop_one_ul.innerHTML = html;
+			})
+						
+//			function caution_list(){
+//				mui.ajax(WebApi + '/api/Alarm/GetAlarmListByUserID?userid='+userInfo.Data.UserID+'&pageSize='+ pageSize +'&pageIndex='+ pageIndex +'&alarmType='+''+'&startTime='+startTime+'&endTime='+endTime+'&key='+appLoginKey,{
+//					headers:{'Content-Type':'application/json'},             
+//					dataType:"json",
+//					type:"POST",
+//					success:function(data,textStatus,xhr){
+//						if(data.State == 1){
+//							var z = null;
+//							var html = '';
+//							data.Data.forEach(function(item,i){
+//								pop_one_data.push(item);
+//								z = i;								
+//								    html += '<li class="mui-table-view-cell" allt="'+(j+i+1)+'"><a href="#">'+
+//												'<div style="position: relative;">'+
+//													'<img src="../img/images/center_02_03.png" width="20" style="position: absolute;top: 0;left: 0;"/>'+
+//													'<span style="margin-left: 31px;">'+item.VehicleNum+'</span>'+
+//													'<span style="position: absolute;top: 0;right: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 50%;">'+item.AlarmType+'</span>'+
+//												'</div>'+
+//											'</a>'+
+//											'</li>';
+//							})
+//							pop_one_ul.innerHTML += html;
+//							pageIndex++;
+//							j += z +1;
+//						}
+//					},
+//					error:function(xhr,type,errorThrown){
+//					//	console.log(type);
+//					}
+//				});
+//			}
+			
+//			var sss = false;
+//			$(".mui-scroll-wrapper").scroll(function() {
+//				if(sss||j > 200){return}
+//				sss = true;
+//				caution_list();
+//				setTimeout(function(){
+//					sss = false;
+//				},2000);
+//			});
+			
+		</script>
+	</body>
+</html>

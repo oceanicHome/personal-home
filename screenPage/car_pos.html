@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body{padding: 0;margin: 0;}
+			.car_two_btn{width: 35px;text-align: center;padding: 3px;border-radius: 3px;margin-left: 2px;background-color: white;box-shadow: -1px 2px 2px #90a4bf;}
+			.car_two_btn > img{width: 20px;}
+			.car_two_btn > p{margin: 5px 2px;padding: 0;height: 1px;background-color: #cccccc;}
+		</style>
+	</head>
+	<body>
+		<div class="car_two_btn">
+			<img class="img_bb" alt="0" src="../img/images/center_30.png"/>
+			<br /><p></p>
+			<img class="img_bb" alt="1" src="../img/images/center_28.png"/>
+		</div>
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){$('.car_two_btn .img_bb').click(function(){var alt=$(this).attr("alt");plus.webview.currentWebview().opener().evalJS('car_two_btn('+alt+')');})});
+		</script>
+	</body>
+</html>

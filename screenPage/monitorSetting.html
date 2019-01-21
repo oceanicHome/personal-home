@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-switch-mini{
+				width: 50px;
+				height: 25px;
+			}
+			.mui-switch .mui-switch-handle{
+				width: 23px;
+				height: 23px;
+				
+			}
+			.mui-switch-mini.mui-active .mui-switch-handle{
+				transform: translate(24px, 0px);
+			}
+			    
+		</style>
+	</head>
+
+	<body>
+		<div class="hasHeader">
+			<header class="mui-bar mui-bar-nav" style="box-shadow: none;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">监控设置</h1>
+			</header>
+			
+			<div class="mui-content" style="background-color: transparent;">
+				<h5 class="mui-content-padded">刷新间隔(s)</h5>
+				<div class="mui-card">				
+					<div class="mui-numbox" data-numbox-step='5' data-numbox-min='10' data-numbox-max='100000'>
+					  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+					  <input id="currentFreshTime" class="mui-numbox-input" type="number" value="30"/>
+					  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+					</div>
+					<span>刷新间隔不能低于10秒</span>
+				</div>	
+				<h5 class="mui-content-padded">报警类型</h5>
+				<div class="mui-card">				
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<span>超速报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>盗警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>GPS接收机故障</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>进范围报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>超出线路报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>超速报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>出域报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>进域报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>停车休息不足报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>停车时间过长报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>超出线路报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>非法时间段行驶-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>反转报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<!--<li class="mui-table-view-cell">
+							<span>非法聚集报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>停车场-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>关键区域-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>-->
+						<li class="mui-table-view-cell">
+							<span>GNSS天线断路报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>禁停点停车报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>断电报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li><!---->
+						<li class="mui-table-view-cell">
+							<span>主电源欠压</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>紧急报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>疲劳驾驶报警</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<span>关注点停车报警-中心</span>
+							<div class="mui-switch mui-switch-blue mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>						
+					</ul>										
+				</div>	
+			</div>
+		</div>
+		
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/page/monitorSetting.js"></script>		
+	</body>
+
+</html>

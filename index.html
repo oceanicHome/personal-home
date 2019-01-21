@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>佳裕车联</title>
+		<link rel="stylesheet" href="libs/mui/css/mui.min.css" type="text/css" charset="utf-8"/>
+		<link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8"/>
+		<link rel="stylesheet" href="css/login.css" type="text/css" charset="utf-8"/>
+		<script type="text/javascript" src="js/Config.js"></script>
+	</head>
+	<body onselectstart="return false;">
+		<div id="login_page">
+			<div class="login_back">
+				<img style="width: 100%;" src="img/u1.png" />
+			</div>
+			<div class="login_user">
+				<ul>
+					<li id="enterChooseCity" style="position: relative;">
+						<span>区域</span><input id="region" type="text" style="max-width: 70%;" readonly>
+						<i class="mui-icon mui-icon-forward"></i>
+					</li>
+					<li><span>账户</span><input id="usr" type="text" maxlength="16"/></li>
+					<li><span>密码</span><input id="pwd" type="password" maxlength="50"/></li>
+				</ul>
+				
+				<div class="labelBox">
+					<input id="checkbox-blue" type="checkbox" style="display: none;"/>  
+					<label class="lab1"></label>
+					<label class="lab1" style="margin-left: 12px;margin-top: -3px;">记住密码</label>					
+				</div>
+				
+				<div class="labelBox">
+					<input id="checkbox-into" type="checkbox" style="display: none;"/>  
+					<label class="lab2"></label>
+					<label class="lab2" style="margin-left: 12px;margin-top: -3px;">自动登录</label>					
+				</div>
+				
+				<div id="login_div">
+					<div class="login_btn" id="login_btn">登录</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="libs/mui/js/mui.min.js"></script>
+	<script type="text/javascript" src="js/enter_i.js"></script>
+	<script type="text/javascript" src="js/page/index.js"></script>
+</html>

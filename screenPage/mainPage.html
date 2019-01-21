@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>佳裕车联</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../libs/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/mainPage.css" rel="stylesheet" />
+		<link href="http://api.map.baidu.com/library/TrafficControl/1.2/src/TrafficControl_min.css" rel="stylesheet" />
+		<script src="../js/Config.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=YpPYDb9u47Zvs6AElUqiTKtyZkpeEw20"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.2/src/TrafficControl_min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/InfoBox/1.2/src/InfoBox_min.js"></script>
+	</head>
+	<body style="background-color: #f2f2f2;">
+		<div class="hasHeader" style="height: 100%;">
+			<header class="mui-bar mui-bar-nav">
+				<div id="header_main">
+					<div class="tap_div">
+						<img class="img_title" id="enter_car_search" src="../img/images/center_08.png"/>
+						<div class="input_header">请输入车牌号</div>
+						<img class="img_title right_i" id="enter_car_list" src="../img/images/center_10.png"/>
+					</div>
+				</div>
+				<div id="header_icons">
+					<div class="icon-1v">
+						<img src="../img/images/center_03.png"/>
+					</div>
+					<div class="icon-2v">
+						<img style="width: 23px;" src="../img/images/center_05.png"/>
+					</div>
+				</div>
+			</header>
+			
+			<nav class="mui-bar mui-bar-tab main_tabbar">
+				<a class="mui-tab-item tab_c_a" href="#Popover_0">
+					<span id="red_caution"></span>
+					<img style="display: none;" class="img_0_1" src="../img/images/center_41.png"/>
+					<img style="display: block;" class="img_0_2" src="../img/images/center_43.png"/>
+					报警
+				</a>
+				<a class="mui-tab-item tab_c_a" href="#Popover_1">
+					<img style="display: none;" class="img_1_1" src="../img/images/center_46.png"/>
+					<img style="display: block;" class="img_1_2" src="../img/images/center_48.png"/>
+					控制中心
+				</a>
+			</nav>
+			<div class="mui-content" style="background-color: transparent;height: 100%;">	
+				<div id="allmap" style="height: 100%;"></div>
+				<div id="BM-panorama"></div>
+				<div class="rl_img_div" id="rl_img_div">
+					<img class="img_rl" allt="2" src="../img/images/center_33.png"/>
+					<img class="img_rl" allt="1" src="../img/images/center_36.png"/>
+				</div>
+				<div class="car_two_btn" id="car_two_btn">
+					<img class="img_bb" allt="0" src="../img/images/center_28.png"/>
+					<br /><p></p>
+					<img class="img_bb car_person" allt="1" sign="car" src="../img/images/center_30.png"/>
+					<br /><p></p>
+					<img class="img_bb" allt="2"src="../img/images/morecar_03.png"/>
+					<br /><p></p>
+					<img class="img_bb" allt="3"src="../img/images/center_31.png"/>
+				</div>
+				<div id="my_popup_div" class="my_popup_div">
+					<div class="my_popup_content pop_two">
+						<div class="check_point" id="once_call">
+							<img src="../img/images/center_popup_06.png" width="18"/>
+							<span>单次点名</span>
+						</div>
+						<div class="check_point" id="change_data">
+							<img src="../img/images/center_popup_03.png" width="18"/>
+							<span>修改资料</span>
+						</div>
+						<div class="check_point" id="see_pop_p">
+							<img src="../img/images/center_popup_09.png" width="18"/>
+							<span>查标注点</span>
+						</div>
+						<div class="my_triangle tri_one"></div>
+						<div class="my_triangle tri_two shadow"></div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<script src="../js/map/textIconOverlay.js"></script>
+		<script src="../js/map/markerClusterer.js"></script>
+		<script src="../libs/jquery/js/jquery-2.1.4.min.js"></script>
+		<script src="../libs/mui/js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/update_cyf.js"></script>
+		<script src="../js/commonMMap.js"></script>
+		<script src="../js/commonMap.js"></script>
+		<script src="../js/page/mainPage.js"></script>
+		<script src="../js/page/monitor.js"></script>
+	</body>
+</html>

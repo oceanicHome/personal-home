@@ -1,0 +1,37 @@
+.set_head_img{
+
+}
+.set_head_img > img{
+	width: 100%;
+	display: inherit;
+}
+.item_settings{
+	background-color: white;
+	padding: 10px;
+	position: relative;
+	margin-top: 8px;
+}
+.item_settings > img{
+	width: 20px;
+	vertical-align: -4px;
+}
+.item_settings > span{
+	font-size: 14px;
+	color: #444;
+	padding-left: 2px;
+}
+.item_settings > i{
+	color: #b3b3b3;
+	position: absolute;
+	right: 5px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.mui-popup-inner .mui-popup-title{
+	display: none;
+}
+.mui-popup-buttons .mui-popup-button:first-child{
+	font-weight: 600;
+	color: red;
+}

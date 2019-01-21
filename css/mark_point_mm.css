@@ -1,0 +1,82 @@
+html,body,.hasHeader,.mui-content,#map{
+	height: 100%;
+}
+.hasHeader .mui-content #map{
+	top: 0px !important;	
+}
+.infoBoxContent{
+	padding: 10px;				
+	font-size: 14px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 0 4px 0.3px #888;
+}
+.infoBoxContent ul{
+	margin: 0px;
+	padding: 0px;				
+}
+.infoBoxContent ul li{
+	list-style: none;			
+	line-height: 18px;
+}
+.infoBoxContent ul li>span:first-child{
+	margin-right: 5px;
+}
+.infoBoxContent .p1{
+	margin: 0px;
+	color: #9c9c9c;	
+}
+.infoBoxContent .p2{
+	margin: 0px;
+	text-align: center;			
+}
+.infoBoxContent>p>img{
+	margin: 0px 40px;
+}
+#whiteAngle{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	bottom: 12px;
+	left: 120px;				
+	transform: rotate(29deg) skew(0deg,30deg);
+	box-shadow: 2px 2px 6px -3px #888;
+}
+.firstLine{
+	font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+button.btn{
+	margin: 5px 15px;
+	background-color: #077acb;
+    color: #fff;
+    border: none;
+}
+hr{
+	margin: 5px 0px;
+    height: 1px;
+    border: none;
+    background-color: #ccc;
+}
+.anchorBL{
+	display: none;
+}
+[align="right"]{
+	display: none;
+}
+.navSty{
+	float: right;
+	padding: 5px 8px 5px 30px;
+	border-radius: 20px;
+	/*background: #E3EEF2 url("../img/images/audit_06.png") no-repeat fixed 5px center;*/
+	color: #000;
+	font-weight: normal;
+	font-size: 15px;
+	background-color: #E3EEF2;
+	background-image: url("../img/images/audit_06.png");
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}

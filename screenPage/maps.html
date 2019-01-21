@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>Hello H5+</title>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript">
+
+			
+
+function showMaps(){
+	if('Android'===plus.os.name&&navigator.userAgent.indexOf('StreamApp')>0){
+		plus.nativeUI.toast('当前环境暂不支持地图插件');
+		return;
+	}
+	var ws=plus.webview.currentWebview();
+	var wm=plus.webview.getWebviewById(plus.runtime.appid);
+	
+	wm&&wm.evalJS("preateClear()");
+	clicked('maps_map.html',false,true);
+}
+		</script>
+		<link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8"/>
+		
+		<style>
+			.sdk_sty{
+				background-color: black;
+				color: white;
+				font-size: 16;
+				padding: 10px;
+				width: 80%;
+				margin: 10px auto;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header id="header">
+			<div class="nvbt iback" onclick="back()"></div>
+			<div class="nvtt">百度地图SDK</div>
+		</header>
+		<div id="dcontent" class="dcontent">
+			<br/>
+			
+			<div class="sdk_sty" onclick="showMaps();">百度地图SDK</div>
+			
+			<br/>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/immersed.js" ></script>
+</html>
